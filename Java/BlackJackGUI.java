@@ -13,8 +13,8 @@ public class BlackJackGUI {
         JFrame frame = new JFrame("Window");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JLabel textLabel = new JLabel("I'm a label in the window",SwingConstants.CENTER);
-        textLabel.setPreferredSize(new Dimension(300, 100));
-        //frame.getContentPane().add(textLabel, BorderLayout.CENTER);
+        textLabel.setSize(new Dimension(600, 400));
+        frame.getContentPane().add(textLabel, SwingConstants.CENTER);
         frame.pack();
         frame.setVisible(true);
         
