@@ -18,7 +18,8 @@ public class BlackJackGUI extends JFrame {
         showCard("Back", 180, 30);
         showCard(drawCard(), 50, 350);
         showCard(drawCard(), 180, 350);
-        money(1000000000);
+        money(100);
+        money(1000000);
 
         //System.out.println(drawCard());
     }
@@ -30,7 +31,9 @@ public class BlackJackGUI extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(0, 0, 440, 700); 
         frame.setLocationRelativeTo(null);
+        frame.getContentPane().setBackground(new java.awt.Color(35, 31, 32));
         frame.setVisible(true);
+        //background color rgb(35,31,32) or 231F20
     }
 
     public static void showCard(String card, int x, int y) {
@@ -88,8 +91,10 @@ public class BlackJackGUI extends JFrame {
         panel.add(money);
         frame.add(panel);
         panel.setLocation(0,0);
-        panel.setSize(440,70);
+        panel.setSize(440,50);
+        panel.setBackground(new java.awt.Color(35, 31, 32));
+        panel.setForeground(new java.awt.Color(255,255,255));
         SwingUtilities.updateComponentTreeUI(frame); //Refresh the frame
-        System.out.println(moneyFormat);
+        //System.out.println(moneyFormat);
     }
  }
