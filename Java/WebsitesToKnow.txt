@@ -1,2 +1,3 @@
 https://docs.oracle.com/javase%2Ftutorial%2F/uiswing/components/frame.html
 https://www.thoughtco.com/create-a-simple-window-using-jframe-2034069#:~:text=JFrame%20frame%20%3D%20new%20JFrame(%22,creating%20the%20window%20for%20us.
+https://www.tools3ox.com/tools/images/ssc/
