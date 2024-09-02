@@ -1,8 +1,9 @@
 import java.awt.*;
 import javax.swing.*;
 import java.text.DecimalFormat;
+import java.awt.event.*;
 
-public class BlackJackGUI {
+public class BlackJackGUI extends JFrame {
 
     static JFrame frame;
     static int moneyRaw = 100;
@@ -12,6 +13,11 @@ public class BlackJackGUI {
     static Image img;
     static JLabel moneyTxt = new JLabel();
     static JPanel monPanel = new JPanel();
+    static JButton hitButton = new JButton("Hit");
+    static JButton standButton = new JButton("Stand");
+    static JPanel hitPan = new JPanel();
+    static JPanel standPan = new JPanel();
+
 
     public static void main(String[] args) {
         createFrame();
@@ -21,6 +27,8 @@ public class BlackJackGUI {
         showCard(drawCard(), 50, 350);
         showCard(drawCard(), 180, 350);
         money(0);
+        BlackJackGUI bt = new BlackJackGUI();
+        bt.setUpButtonListeners();
         
     }
 
@@ -38,18 +46,13 @@ public class BlackJackGUI {
         //background color rgb(35,31,32) or 231F20
 
         /*    creating hit and stand buttons    */
-        //creating objects
-        JButton hit = new JButton("Hit");
-        JButton stand = new JButton("Stand");
-        JPanel hitPan = new JPanel();
-        JPanel standPan = new JPanel();
         //setting hit panel size, location, and background color
-        hitPan.add(hit);
+        hitPan.add(hitButton);
         hitPan.setLocation(80,560);
         hitPan.setSize(70,35);
         hitPan.setBackground(new java.awt.Color(35, 31, 32));
         //setting stand panel size, location, and background color
-        standPan.add(stand);
+        standPan.add(standButton);
         standPan.setLocation(210,560);
         standPan.setSize(70,35);
         standPan.setBackground(new java.awt.Color(35, 31, 32));
@@ -57,6 +60,16 @@ public class BlackJackGUI {
         frame.add(hitPan);
         frame.add(standPan);
 
+    }
+
+    public void setUpButtonListeners() {
+        ActionListener buttonListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                money(10);
+            }
+        };
+        hitButton.addActionListener(buttonListener);
     }
 
     public static void showCard(String card, int x, int y) {
