@@ -17,19 +17,26 @@ public class BlackJackGUI extends JFrame {
     static JButton standButton = new JButton("Stand");
     static JPanel hitPan = new JPanel();
     static JPanel standPan = new JPanel();
+    static JLabel cardImage = new JLabel();
+    static int cardPhotoNum = 0;
+    static String cardPhotoName;
 
 
     public static void main(String[] args) {
         createFrame();
         createDeck();
+        money(0);
+        /*
         showCard(drawCard(), 50, 30);
         showCard("Back", 180, 30);
         showCard(drawCard(), 50, 350);
         showCard(drawCard(), 180, 350);
-        money(0);
+        */
+
+        //to call a non static method (button acitons) in a static method (main)
         BlackJackGUI bt = new BlackJackGUI();
-        bt.setUpButtonListeners();
-        
+        bt.hitButtonAction();
+        bt.standButtonAction();
     }
 
     public static void createFrame() {
@@ -62,14 +69,28 @@ public class BlackJackGUI extends JFrame {
 
     }
 
-    public void setUpButtonListeners() {
+    public void hitButtonAction() {
         ActionListener buttonListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                money(10);
+                System.out.print("Player Hit, Card: ");
+                String temp = drawCard();
+                showCard(temp, 50, 350);
+                System.out.println(temp);
             }
         };
         hitButton.addActionListener(buttonListener);
+    }
+
+    public void standButtonAction() {
+        ActionListener buttonListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                System.out.println("Player Stood");
+                //action tbd
+            }
+        };
+        standButton.addActionListener(buttonListener);
     }
 
     public static void showCard(String card, int x, int y) {
@@ -79,7 +100,6 @@ public class BlackJackGUI extends JFrame {
 
         //adding the image to the frame
         Container c = frame.getContentPane(); //idk, frame.getContentPlane wont work without a container so here
-        JLabel cardImage = new JLabel();
         cardImage.setIcon(new ImageIcon(card));
         Dimension size = cardImage.getPreferredSize();
         cardImage.setBounds(x, y, size.width, size.height);
@@ -89,7 +109,7 @@ public class BlackJackGUI extends JFrame {
 
     public static void createDeck() {   
         for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 12; j++) {
+            for (int j = 0; j < 13; j++) {
                 deck[i][j] = j; 
                 //System.out.print(j + " "); //This is for debug
             }
@@ -102,18 +122,25 @@ public class BlackJackGUI extends JFrame {
 
         //first randomly drawn card
         int ranSuit = (int)(Math.random() * 4);
-        int ranFace = (int)(Math.random()* 13);
+        int ranFace = (int)(Math.random() * 13);
 
         //makes sure that the card has not already been drawn
-        while((deck[ranSuit][ranFace] > 100)) {
+        while((deck[ranSuit][ranFace] >= 100)) {
             ranSuit = (int)(Math.random() * 4);
-            ranFace = (int)(Math.random()* 13);
+            ranFace = (int)(Math.random() * 13);
         }
         
         //shows that the card has been played
         deck[ranSuit][ranFace] = 100;
         //makes the card name so that it can be displayed with the card images
         cardDrawn = ranSuit + "_" + ranFace;
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 13; j++) {
+                System.out.print(deck[i][j] + " ");
+            }
+            System.out.println();
+        }
 
         return cardDrawn;
     }
