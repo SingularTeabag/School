@@ -20,7 +20,7 @@ public class BlackJackGUI extends JFrame {
     static JLabel cardImage = new JLabel();
     static int cardPhotoNum = 0;
     static String cardPhotoName;
-
+   
 
     public static void main(String[] args) {
         createFrame();
@@ -66,7 +66,6 @@ public class BlackJackGUI extends JFrame {
         //adding the panels to the frame
         frame.add(hitPan);
         frame.add(standPan);
-
     }
 
     public void hitButtonAction() {
@@ -80,7 +79,7 @@ public class BlackJackGUI extends JFrame {
             }
         };
         hitButton.addActionListener(buttonListener);
-    }
+    } 
 
     public void standButtonAction() {
         ActionListener buttonListener = new ActionListener() {
@@ -97,6 +96,9 @@ public class BlackJackGUI extends JFrame {
         //formats the card so that it can be found with resources 
         card += ".png";
         card = "cards/" + card;
+
+        cardPhotoName = Integer.toString(cardPhotoNum);
+        
 
         //adding the image to the frame
         Container c = frame.getContentPane(); //idk, frame.getContentPlane wont work without a container so here
@@ -135,12 +137,14 @@ public class BlackJackGUI extends JFrame {
         //makes the card name so that it can be displayed with the card images
         cardDrawn = ranSuit + "_" + ranFace;
 
+        //debug
+        /*
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 13; j++) {
                 System.out.print(deck[i][j] + " ");
             }
             System.out.println();
-        }
+        } */
 
         return cardDrawn;
     }
