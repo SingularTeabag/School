@@ -24,8 +24,8 @@ public class HandCalculations {
         System.out.println("l. " + (b % a + 3));
         System.out.println("m. " + ((a + 3) % b));
         
-        a = a * 2;
-        c = c / 2;
+        a *= 2;
+        c /= 2;
         
         System.out.println("\nTask 3:");
 
