@@ -18,8 +18,6 @@ public class BlackJackGUI extends JFrame {
     static JPanel hitPan = new JPanel();
     static JPanel standPan = new JPanel();
     static JLabel cardImage = new JLabel();
-    static int cardPhotoNum = 0;
-    static String cardPhotoName;
    
 
     public static void main(String[] args) {
@@ -92,16 +90,27 @@ public class BlackJackGUI extends JFrame {
         standButton.addActionListener(buttonListener);
     }
 
+    public static void pictureArr(String card, int location, int x, int y){
+        card += ".png";
+        card = "cards/" + card;
+        
+        JLabel[] pictures=new JLabel[10];
+        
+        Container c = frame.getContentPane();
+        pictures[location].setIcon(new ImageIcon(card));
+        Dimension size = pictures[location].getPreferredSize();
+        pictures[location].setBounds(x, y, size.width, size.height);
+        c.add(pictures[location]);
+        SwingUtilities.updateComponentTreeUI(frame);
+    }
+
     public static void showCard(String card, int x, int y) {
         //formats the card so that it can be found with resources 
         card += ".png";
         card = "cards/" + card;
 
-        cardPhotoName = Integer.toString(cardPhotoNum);
-        
-
         //adding the image to the frame
-        Container c = frame.getContentPane(); //idk, frame.getContentPlane wont work without a container so here
+        Container c = frame.getContentPane();
         cardImage.setIcon(new ImageIcon(card));
         Dimension size = cardImage.getPreferredSize();
         cardImage.setBounds(x, y, size.width, size.height);
