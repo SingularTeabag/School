@@ -10,11 +10,6 @@ public class HandCalculationsBetter {
         c /= 2;
         System.out.println("\nTask 3:");
         printCalc();
-        printMy("Hi");
-    }
-
-    public static void printMy(String input) {
-        System.out.println(input);
     }
 
     public static void printCalc() {
