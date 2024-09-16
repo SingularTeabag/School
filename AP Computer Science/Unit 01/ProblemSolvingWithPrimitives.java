@@ -102,10 +102,6 @@ public class ProblemSolvingWithPrimitives {
                        should be 30.*/
         int n = 123;
         System.out.print("\nQuestion 15\nInput a number: 123\nThe changed number will be: "); //in this senario I would use 'int userNum = userInput.nextLine();'
-        int nTensPlace, nOnesPlace, nOther;
-        nTensPlace = n / 10 % 10;
-        nOnesPlace = n % 10;
-        nOther = n / 100;
-        System.out.println("" + nOther + nOnesPlace + nTensPlace);
+        System.out.println(n/100*100+n%10*10+n/10%10);
     }
 }
