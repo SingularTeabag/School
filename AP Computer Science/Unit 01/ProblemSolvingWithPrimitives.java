@@ -80,8 +80,8 @@ public class ProblemSolvingWithPrimitives {
         c = 6;
         double d, x1, x2;
         d = Math.sqrt(b * b - (4 * a * c));
-        x1 = (-1 * b + d)/(2 * a);
-        x2 = (-1 * b - d)/(2 * a);
+        x1 = (-b + d)/(2 * a);
+        x2 = (-b - d)/(2 * a);
         System.out.println("Question 13\nGiven " + a + "x^2 + " + b + "x + " + c +" the real root will be " + x1 + " and " + x2 + "");
 
         /*Question 14: Find a syntax error in the following code fragment: 
