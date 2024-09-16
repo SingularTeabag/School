@@ -21,9 +21,15 @@ public class ProblemSolvingWithPrimitives2 {
                        sure your program displays the correct result when the user enters 9:00,
                        10:10, 12:00, 12:50.*/
 
-        /*Question 20: 
-        */   
-        /*Question 21:
+        /*Question 20: 'curHour' and 'curMin' represent the current time, and 'depHour', 'debMin'
+                       represent the departure time of a bus. Suppose all these variables are
+                       initialized with some values; both times are between 1 p.m. and 11 p.m. of
+                       the same day. Fill in the blanks in the following statements that display the 
+                       remaining waiting time in hours and minutes: */
+
+        /*Question 21: The BMI program computes a person's body mass index (BMI). BMI is
+                       defined as the weight, expressed in kilograms, devided by the square of the 
+                       height expressed in meters. (one inch is 0.0254 meters;)
         */
         /*Question 22:
         */
