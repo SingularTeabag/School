@@ -1,4 +1,4 @@
-public class ProblemSolvingWithPrimitives2 {
+public class PrimitiveSolving2 {
     public static void main(String[] args) {
 
         /*Question 16: An integer constant 'dayOfWeek1' has a value from 0 to 6 and represents the 
@@ -8,6 +8,8 @@ public class ProblemSolvingWithPrimitives2 {
                        For example, if 'dayOfWeek1 = 0'(January 1st is a Sunday) and 'day = 13'.
                        (January 13th), then 'dayOfWeek', the day of the week for January 13th,
                        should get a value of 5 (Friday).*/
+
+        
 
         /*Question 18: Rewrite the Gas Mileage to prompt the user to enter the gas mileage and the 
                        number of miles and display the amount of gas spnt in htat trip.*/
