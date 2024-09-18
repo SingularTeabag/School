@@ -8,9 +8,9 @@ public class PrimitiveSolving2 {
                        For example, if 'dayOfWeek1 = 0'(January 1st is a Sunday) and 'day = 13'.
                        (January 13th), then 'dayOfWeek', the day of the week for January 13th,
                        should get a value of 5 (Friday).*/
-        int dayOfWeek1;
+        int dayOfWeek1 = 13;
         int dayOfWeek;
-        int day;
+        int day = 1;
         String nameWeek[] = new String[6];
         nameWeek[0] = "Sunday";
         nameWeek[1] = "Monday";
@@ -20,7 +20,7 @@ public class PrimitiveSolving2 {
         nameWeek[5] = "Friday";
         nameWeek[6] = "Saturday";
 
-
+        System.out.println(dayOfWeek1 / 7); 
 
 
         /*Question 18: Rewrite the Gas Mileage to prompt the user to enter the gas mileage and the 
