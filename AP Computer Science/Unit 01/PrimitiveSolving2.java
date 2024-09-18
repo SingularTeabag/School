@@ -8,8 +8,20 @@ public class PrimitiveSolving2 {
                        For example, if 'dayOfWeek1 = 0'(January 1st is a Sunday) and 'day = 13'.
                        (January 13th), then 'dayOfWeek', the day of the week for January 13th,
                        should get a value of 5 (Friday).*/
+        int dayOfWeek1;
+        int dayOfWeek;
+        int day;
+        String nameWeek[] = new String[6];
+        nameWeek[0] = "Sunday";
+        nameWeek[1] = "Monday";
+        nameWeek[2] = "Tuesday";
+        nameWeek[3] = "Wednesday";
+        nameWeek[4] = "Thursday";
+        nameWeek[5] = "Friday";
+        nameWeek[6] = "Saturday";
 
-        
+
+
 
         /*Question 18: Rewrite the Gas Mileage to prompt the user to enter the gas mileage and the 
                        number of miles and display the amount of gas spnt in htat trip.*/

@@ -1,4 +1,4 @@
-public class ProblemSolvingWithPrimitives {
+public class PrimitiveSolving {
     public static void main(String[] args) {
         
 
