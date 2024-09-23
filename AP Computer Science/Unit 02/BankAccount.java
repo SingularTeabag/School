@@ -1,3 +1,9 @@
+/*
+ * Author:  <you>
+ * Date:    9/24
+ * Purpose: Create and manipulate BankAccount objects
+ */
+
 public class BankAccount {
     private String acctType;
     private int accountID;

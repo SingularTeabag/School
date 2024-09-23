@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.text.DecimalFormat;
 import java.awt.event.*;
 
-public class BlackJackGUI extends JFrame {
+public class BlackJackGUI2 extends JFrame {
 
     static JFrame frame;
     static int moneyRaw = 100;
@@ -32,7 +32,7 @@ public class BlackJackGUI extends JFrame {
         */
 
         //to call a non static method (button acitons) in a static method (main)
-        BlackJackGUI bt = new BlackJackGUI();
+        BlackJackGUI2 bt = new BlackJackGUI2();
         bt.hitButtonAction();
         bt.standButtonAction();
     }
