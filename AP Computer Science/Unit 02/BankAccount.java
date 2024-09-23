@@ -3,7 +3,7 @@ public class BankAccount {
     private int accountID;
     private double total;
 
-    public BankAccount1(String type, int id, double initialDeposit) {
+    public BankAccount(String type, int id, double initialDeposit) {
         acctType = type;
         accountID = id;
         total = initialDeposit;
@@ -27,7 +27,7 @@ public class BankAccount {
 
     public String toString() {
         return "Type: " + acctType + "\n" +
-               "ID: " + getID() + "   Balance : $" + 
+               "ID: " + getID() + "   Balance: $" + 
                getTotal();
     }
 }
