@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.text.DecimalFormat;
-public class Blackjack
+public class BlackjackCMD
 {
     static int playerMoney = 100;
     static int playerBet;
