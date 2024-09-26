@@ -63,12 +63,14 @@ package Bank;
      //  deposit given amount to account
      public void deposit(double money)
      {
+        System.out.println("You have deposited: $" + money);
          total = total + money;
      }
      
      // withdraw given amount from account
      public void withdraw(double money)
      {
+        System.out.println("You have withdrawn: $" + money);
          total = total - money;
      }
      
