@@ -50,8 +50,11 @@ public class PrimitiveSolving2 {
                        defined as the weight, expressed in kilograms, devided by the square of the 
                        height expressed in meters. (one inch is 0.0254 meters)*/
                        //Already solved
-        /*Question 22: 
-        */
+        /*Question 22: */
+        int nJars = 13;
+        int nCartons = (nJars + 11) / 12;
+        
+
         /*Question 23:
         */
         /*Question 24:

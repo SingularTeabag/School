@@ -11,12 +11,12 @@ package Bank;
      {
          
         // Create the following BankAcount objects:
-        //   - collegeFund, with ID 82890 and a starting balance 
+        //   - collegeFund, "college Fund", with ID 82890 and a starting balance 
         //     of $47,500
-        //   - retirementSavings, with ID 99999 and a starting 
+        //   - retirementSavings, "Retirement Savings" with ID 99999 and a starting 
         //     balance of $25,000
-        BankAccount collegeFund = new BankAccount("College Fund", 82890, 47500);
-        BankAccount retirementSavings = new BankAccount("Savings", 99999, 25000);
+        BankAccount collegeFund = new BankAccount("College Fund", "Sztachera, Phillip", 82890, 47500);
+        BankAccount retirementSavings = new BankAccount("Savings", "Sztachera, Phillip", 99999, 25000);
 
         // Complete the following 2 S.o.p statements to display account 
         // details
