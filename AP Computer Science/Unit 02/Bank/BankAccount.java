@@ -49,8 +49,17 @@ package Bank;
      }
  
      // return ACCOUNT TYPE
- 
+     public String getAccountType()
+     {
+         return acctType;
+     }
      
+    // return ACCOUNT holder
+     public String getAccountHolder()
+     {
+         return accHolderName;
+     }
+
      //  deposit given amount to account
      public void deposit(double money)
      {

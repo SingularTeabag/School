@@ -25,16 +25,16 @@ package Bank;
         System.out.println(retirementSavings.toString());
          
         // Deposit $597 to collegeFund
-        collegeFund.deposit(579);
-        // Deposit $1,000 to retirementSaving
+        collegeFund.deposit(597);
+       // Deposit $1,000 to retirementSaving
         retirementSavings.deposit(1000);
-        // Withdraw $159.95 from collegeFund
+       // Withdraw $159.95 from collegeFund
         collegeFund.withdraw(159.95);
-        // Deposit $159.36 to collegeFund
+       // Deposit $159.36 to collegeFund
         collegeFund.deposit(159.36);
-        // Deposit $1,500 to retirementSavings  
+       // Deposit $1,500 to retirementSavings  
         retirementSavings.deposit(1500);
-        // Withdraw $250 from retirementSavings  
+       // Withdraw $250 from retirementSavings  
         retirementSavings.withdraw(250);
         // Copy/paste your S.o.p statements from above to display the current 
         // balance in each account.  TRACE the transactions for each account
