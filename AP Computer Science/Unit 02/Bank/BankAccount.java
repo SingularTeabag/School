@@ -74,6 +74,10 @@ package Bank;
          total = total - money;
      }
      
+     public void intrest(double precentage) {
+        total *= 1 + (precentage / 100);
+     }
+
      // return formatted account details
      public String toString()
      {
