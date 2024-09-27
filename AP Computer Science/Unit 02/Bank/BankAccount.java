@@ -74,6 +74,7 @@ package Bank;
          total = total - money;
      }
      
+     //adds interest to the account
      public void addIntrest(double precentage) {
         total *= 1 + (precentage / 100);
      }
