@@ -5,7 +5,7 @@ public class Question21 {
     {
         Scanner input = new Scanner(System.in);
         
-        System.out.print("Enter height (inches): ");
+        System.out.print("Enter height (inches): "); 
         int height = input.nextInt();
         
         System.out.print("Enter weight (lbs): ");
