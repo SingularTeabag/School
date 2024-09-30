@@ -38,4 +38,20 @@ public class APLine {
             output += "+ " + c + " = 0";
         return output;
     }
+
+    public int getA() {
+        return a;
+    }
+
+    public int getB() {
+        return b;
+    }
+
+    public int getC() {
+        return c;
+    }
+    
+    public double findY(int x) {
+        double output = ()(a * x + c) / 
+    }
 }
