@@ -9,7 +9,7 @@ public class Cards {
     public void createDeck() {
         for (int i = 0; i < 4; i++) {
             for(int j = 0; j < 13; j++) {
-                cards[i][j] = j;
+                cards[i][j] = j + 1;
             }
         }
     }
@@ -24,14 +24,26 @@ public class Cards {
         }
         return count;
     }
-    public String drawCard(String loctaion) {
+    public String drawCard() {
         cardX = (int)(Math.random() * 13);
         cardY = (int)(Math.random() * 4);
-        while (cards[cardX][cardY] > 0) {
+
+        while (cards[cardY][cardX] < 0) {
+            System.out.println("Failed");
             cardX = (int)(Math.random() * 13);
             cardY = (int)(Math.random() * 4);
         }
-        cards[cardX][cardY] = 0;
-        return 
+        cards[cardY][cardX] = 0;
+        //printDeck();
+        return  String.valueOf(cardY)+ "_" + String.valueOf(cardX);
+    }
+    
+    public void printDeck() {
+        for (int i = 0; i < 4; i++) { 
+            for (int j = 0; j < 13; j++) {
+                System.out.print(cards[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }

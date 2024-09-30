@@ -22,4 +22,20 @@ public class APLine {
     public boolean isOnLine(int userX, int userY) {
         return (a * userX + b * userY + c) == 0;
     }
+
+    public String toString() {
+        String output = a + "x " ;
+        if (b < 0) {
+            output += "- " + Math.abs(b) + "y ";
+        }
+        else 
+            output += "+ " + b + "y ";
+
+        if (c < 0) {
+            output += "- " + Math.abs(c) + " = 0";
+        }
+        else 
+            output += "+ " + c + " = 0";
+        return output;
+    }
 }
