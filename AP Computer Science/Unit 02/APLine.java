@@ -24,34 +24,14 @@ public class APLine {
     }
 
     public String toString() {
-        String output = a + "x " ;
-        if (b < 0) {
-            output += "- " + Math.abs(b) + "y ";
-        }
-        else 
-            output += "+ " + b + "y ";
-
+        String output = a + "x + " + b + "y ";
         if (c < 0) {
             output += "- " + Math.abs(c) + " = 0";
-        }
-        else 
+            return output;
+        } 
+        else {
             output += "+ " + c + " = 0";
-        return output;
-    }
-
-    public int getA() {
-        return a;
-    }
-
-    public int getB() {
-        return b;
-    }
-
-    public int getC() {
-        return c;
-    }
-    
-    public double findY(int x) {
-        double output = ()(a * x + c) / 
+            return output;
+        }
     }
 }
