@@ -30,32 +30,61 @@ public class Fraction {
         return denom;
     }
 
+    //returns 
     public double getValue() {
         return (double) num / denom;
     }
 
     public void addition(Fraction other) {
-
+        int newDenom = this.getDenom() * other.getDenom();
+        int newNum = this.getNum() * other.getDenom() + this.getDenom() * other.getNum();
+        num = newNum;
+        denom = newDenom;
     }
 
     public void addition(int other) {
-        
+        int newDenom = this.getDenom();
+        int newNum = this.getNum()  + this.getDenom() * other;
+        num = newNum;
+        denom = newDenom;
     }
 
     public void subtraction(Fraction other) {
-        
+        int newDenom = this.getDenom() * other.getDenom();
+        int newNum = this.getNum() * other.getDenom() - this.getDenom() * other.getNum();
+        num = newNum;
+        denom = newDenom;
     }
 
     public void subtraction(int other) {
-        
+        int newDenom = this.getDenom();
+        int newNum = this.getNum() - this.getDenom() * other;
+        num = newNum;
+        denom = newDenom;
     }
 
     public void multiplacation(Fraction other) {
-
+        int newDenom = this.getDenom() * other.getDenom();
+        int newNum = this.getNum() * other.getNum();
+        num = newNum;
+        denom = newDenom;
     }
 
     public void multiplacation(int other) {
-        
+        int newNum = this.getNum() * other;
+        num = newNum;
+    }
+
+    public void devision(Fraction other) {
+        int newDenom = this.getDenom() * other.getNum();
+        int newNum = this.getNum() * other.getDenom();
+        num = newNum;
+        denom = newDenom;
+    }
+
+    public void devision(int other) {
+        int newDenom = this.getDenom() * other;
+        denom = newDenom;
     }
 
     public String toString() {
