@@ -5,8 +5,7 @@ public class StringInvestigation {
         String str2 = "cats";
         String str3 = new String("dogs");
 
-        System.out.println("Oh, no, it's, raining " + str2 + " and " + str3 + "!");
-
-        System.out.println(str1);
+        String str = "Von Neumann, John";
+        System.out.println(str.substring(str.indexOf(",") + 2) + " " + str.substring(0, str.indexOf(",")));
     }
 }
